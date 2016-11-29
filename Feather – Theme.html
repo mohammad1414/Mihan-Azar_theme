@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+	<meta charset="utf-8">
+  <title>[cb:blog_page_title]</title>
+  <base href="[cb:blog_address]" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/jquery.min.js"></script>
+  <meta http-equiv="Content-Language" content="fa">
+  <meta name="description" content="[cb:blog_meta_description]" />
+  <meta name="keywords" content="[cb:blog_meta_keywords]" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1.0">
+  
+  <link rel="alternate" type="application/rss+xml" title="[cb:blog_title]" 
+    href="[cb:blog_rss_href]" />
+  <link rel="alternate" type="application/atom+xml" title="[cb:blog_title]" 
+    href="[cb:blog_atom_href]" />
+<style>
+@charset "UTF-8";
+@font-face {
+  font-family: 'Iransans';
+  src: url("font/IRANSans-Medium-web.woff") format("woff");
+  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'mihan-theme-icons';
+  src: url("http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.eot");
+  src: url("http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.eot?") format("embedded-opentype"), url("http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.svg?") format("svg"), url("http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.woff?") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'mihan-theme-icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em; }
+
+.blog h2 {
+  font-size: 20px; }
+
+.blog h3 {
+  font-size: 17px; }
+
+.blog h4 {
+  font-size: 15px; }
+
+.blog h5 {
+  font-size: 13px; }
+
+.blog h6 {
+  font-size: 11px; }
+
+p {
+  font-size: 12px;
+  margin-bottom: 20px;
+  line-height: 1.8; }
+
+.post h1 {
+  font-size: 12px; }
+
+.icon-search:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-angle-down:before {
+  content: '\e801'; }
+
+/* '' */
+.icon-angle-left:before {
+  content: '\e802'; }
+
+/* '' */
+.icon-angle-right:before {
+  content: '\e803'; }
+
+/* '' */
+.icon-angle-up:before {
+  content: '\e804'; }
+
+/* '' */
+.icon-clock:before {
+  content: '\e805'; }
+
+/* '' */
+.icon-pencil:before {
+  content: '\e806'; }
+
+/* '' */
+.icon-comment:before {
+  content: '\e807'; }
+
+/* '' */
+.icon-share:before {
+  content: '\e808'; }
+
+/* '' */
+.icon-twitter:before {
+  content: '\f099'; }
+
+/* '' */
+.icon-facebook:before {
+  content: '\f09a'; }
+
+/* '' */
+.icon-rss:before {
+  content: '\f09e'; }
+
+/* '' */
+.icon-linkedin:before {
+  content: '\f0e1'; }
+
+/* '' */
+.icon-comment-empty:before {
+  content: '\f0e5'; }
+
+/* '' */
+.icon-info:before {
+  content: '\f129'; }
+
+/* '' */
+.icon-instagram:before {
+  content: '\f16d'; }
+
+/* '' */
+.icon-gplus:before {
+  content: '\f30f'; }
+
+/* '' */
+.icon-instagram-1:before {
+  content: '\f32d'; }
+
+/* '' */
+body,
+input,
+textarea {
+  background-color: #f2f2f2;
+  direction: rtl;
+  font-family: 'Mihan-Iransans', tahoma, arial; }
+
+body,
+ul,
+a,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0; }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 20px; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  transition: 300ms ease-out;
+  transition-property: opacity, background-color, color; }
+  a:hover {
+    color: #f4793d; }
+
+.post a {
+  color: #f4793d; }
+  .post a:hover {
+    color: #c0460b; }
+
+.post ul {
+  list-style: initial;
+  margin: 16px 0;
+  padding-right: 40px; }
+
+.clear_fix:before,
+.clear_fix:after {
+  content: " ";
+  display: table; }
+
+.clear_fix:after {
+  clear: both; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+.header-link {
+  color: rgba(255, 255, 255, 0.6); }
+  .header-link:hover {
+    color: #f4793d; }
+
+.header {
+  background-color: #363636;
+  padding: 100px 0;
+  background-image: url(http://file.mihanblog.com//public/user_data/user_files/639/1915628/bg_b.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position-y: 72%; }
+  .header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); }
+  .header .other-links {
+    vertical-align: top;
+    margin-bottom: 18px; }
+  .header .other-item {
+    padding-right: 10px; }
+  .header .right-action,
+  .header .left-action {
+    position: relative;
+    z-index: 1; }
+  .header .right-action {
+    display: inline-block;
+    width: 66%; }
+  .header .left-action {
+    display: inline-block;
+    width: 33%; }
+  .header .menu {
+    display: inline-block; }
+  .header .menu-item {
+    padding-right: 25px;
+    font-size: 12px; }
+    .header .menu-item:first-child {
+      padding-right: 0; }
+  .header .logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30px; }
+    .header .logo a {
+      display: inline-block; }
+    .header .logo img {
+      width: 100%; }
+  .header .search-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 97%; }
+    .header .search-wrapper .keyword {
+      padding: 2px 10px 2px 29px;
+      border-radius: 3px;
+      border: 0 none;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.6);
+      box-sizing: border-box; }
+      .header .search-wrapper .keyword:focus {
+        background-color: #fff; }
+      .header .search-wrapper .keyword::-webkit-input-placeholder {
+        color: #444;
+        font-size: 11px; }
+      .header .search-wrapper .keyword:-moz-placeholder {
+        /* Firefox 18- */
+        color: #444;
+        font-size: 11px; }
+      .header .search-wrapper .keyword::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #444;
+        font-size: 11px; }
+      .header .search-wrapper .keyword:-ms-input-placeholder {
+        color: #444;
+        font-size: 11px; }
+    .header .search-wrapper .search:before {
+      left: 1px;
+      top: 6px;
+      position: absolute;
+      color: #000; }
+    .header .search-wrapper .search input {
+      left: 1px;
+      top: 3px;
+      cursor: pointer;
+      position: absolute;
+      border: 0 none;
+      background: transparent; }
+
+.container {
+  width: 67%;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 25px;
+  box-sizing: border-box;
+  max-width: 100%; }
+  .container img {
+    max-width: 100%; }
+
+.content {
+  padding: 30px 20px; }
+
+.share-post .social-icons {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+  position: relative;
+  z-index: -1;
+  margin: 0;
+  padding: 0; }
+  .share-post .social-icons a {
+    font-size: 15px; }
+  .share-post .social-icons li {
+    display: inline-block; }
+  .share-post .social-icons.show {
+    z-index: 2;
+    display: inline-block;
+    opacity: 1; }
+
+.share-post .share-text {
+  font-size: 12px;
+  cursor: pointer; }
+
+.post-header {
+  margin-bottom: 0; }
+
+.container .post,
+.container .pagination {
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  margin-bottom: 45px; }
+
+.container .post-header a {
+  color: #3c3c3c; }
+  .container .post-header a:hover {
+    color: #f4793d; }
+
+.container .post-image {
+  max-height: 400px;
+  overflow: hidden; }
+  .container .post-image a {
+    display: inline-block; }
+  .container .post-image img {
+    max-width: 100%; }
+
+.container .post-content {
+  padding: 30px 25px; }
+
+.post-meta span {
+  padding-left: 20px;
+  display: inline-block; }
+  .post-meta span:last-child {
+    padding-left: 0; }
+
+.post-meta a,
+.post-meta .date {
+  color: #8d8d8d;
+  font-size: 11px; }
+
+.post-meta a:hover {
+  color: #f4793d; }
+
+.main-content {
+  color: #636467;
+  margin-bottom: 25px;
+  margin-top: 18px; }
+
+.readmore a {
+  background-color: #f4793d;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 11px;
+  padding: 7px 17px;
+  display: inline-block; }
+  .readmore a:hover {
+    background-color: #f0580e;
+    color: #fff; }
+
+.sidebar-wrapper {
+  width: 32%;
+  display: inline-block; }
+  .sidebar-wrapper .section {
+    padding: 50px 30px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3; }
+
+.sidebar p {
+  color: #9a9a9a; }
+
+.weblog-title {
+  margin-bottom: 18px;
+  font-size: 25px; }
+  .weblog-title a {
+    color: #fff; }
+    .weblog-title a:hover {
+      color: #f4793d; }
+
+.weblog-name {
+  margin-bottom: 20px;
+  text-align: center; }
+
+.widget-survey {
+  font-size: 12px;
+  color: #4d4c4c; }
+  .widget-survey label {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 2px; }
+  .widget-survey input[type="submit"] {
+    vertical-align: middle; }
+  .widget-survey input[type="submit"] {
+    border: 0 none;
+    margin-top: 10px;
+    background-color: #f4793d;
+    border-radius: 3px;
+    padding: 3px 12px;
+    color: #fff;
+    font-size: 12px; }
+    .widget-survey input[type="submit"]:hover {
+      background-color: #f2621b; }
+
+.widget {
+  margin-bottom: 45px; }
+  .widget .widget-title {
+    font-size: 13px;
+    margin-bottom: 10px; }
+  .widget .number {
+    float: left; }
+  .widget .cat-item {
+    font-size: 12px;
+    border-bottom: 1px solid #ededed; }
+    .widget .cat-item.last {
+      border-bottom: 0 none; }
+    .widget .cat-item a {
+      display: block;
+      padding: 12px;
+      color: #4d4c4c;
+      font-size: 12px; }
+      .widget .cat-item a:hover {
+        background-color: #ededed;
+        color: #f4793d; }
+
+.widget-about {
+  text-align: center; }
+  .widget-about .about-text {
+    margin: 0; }
+  .widget-about .author-image img {
+    border-radius: 50%;
+    width: auto !important; }
+
+.widget-recent-post a {
+  color: #9a9a9a;
+  font-size: 13px; }
+
+.widget-recent-post .date {
+  font-size: 10px;
+  color: #999; }
+
+.widget-recent-post .post {
+  border: 0 none; }
+
+.widget-recent-post .post-image {
+  padding-left: 20px;
+  box-sizing: border-box;
+  max-width: 20%;
+  display: inline-block;
+  vertical-align: top; }
+
+.widget-recent-post .post-content {
+  font-size: 11px;
+  vertical-align: top;
+  border-bottom: 1px solid #ededed; }
+
+.tag-wrapper a {
+  display: inline-block;
+  padding: 10px 0 0px 20px;
+  color: #8e8d8d; }
+  .tag-wrapper a:hover {
+    color: #f4793d; }
+
+.tag_wrapper-post {
+  margin-top: 37px;
+  border-top: 1px solid #dbdbdb;
+  padding-top: 11px;
+  font-size: 11px; }
+
+.comment_title_stable {
+  margin-bottom: 20px; }
+
+.comment_list {
+  padding-top: 25px;
+  margin-top: 15px; }
+
+.comment_date {
+  font-size: 11px;
+  color: #9a9a9a; }
+
+.comment_sender {
+  line-height: 1; }
+  .comment_sender > a {
+    display: block;
+    color: #282828; }
+
+.comment_row {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #ededed;
+  border-radius: 3px; }
+
+.comment_list_body {
+  margin-top: 14px; }
+
+.comment_body {
+  font-size: 13px;
+  overflow: hidden; }
+
+.comment_form .comment_form_row {
+  margin-bottom: 22px;
+  font-size: 13px; }
+  .comment_form .comment_form_row input,
+  .comment_form .comment_form_row textarea {
+    border: none;
+    background: #f3f0f0;
+    border: 1px solid #ededed;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 3px; }
+  .comment_form .comment_form_row textarea {
+    width: 100%; }
+  .comment_form .comment_form_row input[type="checkbox"] {
+    width: auto; }
+  .comment_form .comment_form_row input {
+    width: 84%; }
+  .comment_form .comment_form_row label[for="email"],
+  .comment_form .comment_form_row label[for="web"],
+  .comment_form .comment_form_row label[for="full_name"] {
+    width: 16%;
+    padding-top: 13px; }
+  .comment_form .comment_form_row label {
+    width: auto;
+    font-size: 12px; }
+
+.comment_form .msgtitle,
+.comment_form .msgbody {
+  display: block;
+  float: none;
+  width: auto; }
+
+.comment_form div.controls {
+  text-align: left; }
+  .comment_form div.controls .btn {
+    font-family: 'Mihan-Iransans', tahoma, arial;
+    background-color: #f4793d;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+    padding: 7px 17px;
+    border: 0 none; }
+    .comment_form div.controls .btn:hover {
+      background-color: #f0580e; }
+
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #303030; }
+  .footer .copy-right {
+    color: #707070;
+    font-weight: bold;
+    font-size: 12px; }
+    .footer .copy-right a {
+      color: #707070;
+      display: inline-block; }
+      .footer .copy-right a:hover {
+        color: #f4793d; }
+  .footer .heart {
+    fill: red;
+    position: relative;
+    top: 4px;
+    width: 50px;
+    animation: pulse 1s ease infinite;
+    width: 15px;
+    margin: 0 8px;
+    opacity: 0.5; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
+
+.social-wrapper {
+  text-align: center;
+  margin-bottom: 20px; }
+
+.social-item {
+  display: inline-block;
+  margin-left: 45px; }
+  .social-item:last-child {
+    margin-left: 0; }
+  .social-item a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    border-radius: 3px;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7); }
+    .social-item a:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #fff; }
+
+@media (min-width: 0) and (max-width: 750px) {
+  .container {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 30px; }
+  .content {
+    position: relative;
+    padding: 55px 10px; }
+  .sidebar-wrapper {
+    width: 100%; }
+  .header {
+    text-align: center;
+    padding: 50px 0; }
+    .header .other-item {
+      float: none;
+      display: inline-block; }
+    .header .logo {
+      display: block;
+      margin-left: 0; }
+    .header .right-action {
+      display: block;
+      width: 100%; }
+    .header .left-action {
+      width: 75%; }
+    .header .menu {
+      padding: 10px 0; }
+    .header .search-wrapper {
+      float: none;
+      width: 90%; }
+      .header .search-wrapper input {
+        width: 100%;
+        box-sizing: border-box; } }
+
+@media (min-width: 0) and (max-width: 500px) {
+  .header .left-action {
+    width: 100%; }
+  .social-wrapper .social-item {
+    width: 17%;
+    margin-left: 0;
+    margin-bottom: 7px; } }
+
+.pagination {
+  font-size: 12px; }
+  .pagination li {
+    float: left; }
+    .pagination li a {
+      padding: 15px;
+      display: block;
+      color: #383838; }
+      .pagination li a b {
+        color: #f4793d; }
+      .pagination li a:hover {
+        background-color: #f1f1f1;
+        color: #f4793d; }
+  .pagination .all-page {
+    padding: 15px;
+    float: right; }
+
+.post-tag-wrapper,
+.post-subject-wrapper {
+  font-size: 11px; }
+  .post-tag-wrapper span,
+  .post-subject-wrapper span {
+    color: #d6d6d6;
+    padding: 0 3px;
+    display: inline-block; }
+  .post-tag-wrapper .subject-title,
+  .post-tag-wrapper .tag-title,
+  .post-subject-wrapper .subject-title,
+  .post-subject-wrapper .tag-title {
+    display: inline-block;
+    padding-left: 7px; }
+
+.post-tag-wrapper {
+  margin-top: 30px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  border-top: 1px solid #e9e9e9; }
+
+.post__like {
+  height: 30px; }
+
+</style>
+
+</head>
+
+<body class="blog">
+	<div id="page">
+		<header class="header">
+			<div class="wrapper clear_fix">
+				<div class="right-action">
+          <div class="weblog-title"><a href="[cb:blog_full_address]">[cb:blog_title]</a></div> 
+					<div class="menu">
+							<cb:block_extrapage>
+            <ul class="nav_menu"> 
+              <cb:loop_extrapage>     	
+                  <li class="menu-item right">
+		                <a class="menu-item-link header-link" href="[cb:extrapage_href]">[cb:extrapage_title]</a><br/>
+                  </li> 
+              </cb:loop_extrapage>      	
+                <!-- <li class="menu-item right"><a class="menu-item-link" href="[cb:blog_email]"> پست الکترونیک</a></li> -->
+                <!-- <li class="menu-item right"><a class="menu-item-link" href="[cb:blog_contact_href]">تماس با ما</a></li> -->
+            </ul>
+						  	</cb:block_extrapage>
+					</div>
+				</div>
+        <div class="left-action">
+          <div class="other-links">
+            <ul class="clear_fix">
+                <li class="other-item left">
+                  <a class="other-item-link header-link" href="[cb:blog_rss_href]"><i class="icon-rss icon"></i></a>
+                </li>
+                <li class="other-item left">
+                  <a class="other-item-link header-link" href="[cb:blog_Atom_href]">Atom</a>
+                </li>
+            </ul>
+          </div>
+  				<div class="search-wrapper left">
+              <cb:block_search>
+                  <input type="text" name="search_text" class="keyword" placeholder="جستجو..." />
+                  <div class="search icon-search"><input type="submit" value="" /></div>
+              </cb:block_search>
+          </div>
+        </div>
+			</div>
+		</header>
+
+		<div class="content wrapper">
+			<div class="container">
+				<cb:block_post>
+            <cb:loop_post>
+						<div class="post">
+							<!-- <div class="post-image">
+							    <a href="#">
+							    	<img src="img/post-1.jpg">
+							    </a>
+							</div> -->
+		                    <div class="post-content">
+		                    	<div class="post-content-inner-wrapper">
+		                    		<div class="post-inner-content">
+		                        		<[cb:post_title_tag] class="post-header">
+                                  			<a href="[cb:post_href]">[cb:post_title]</a>
+		                    			   </[cb:post_title_tag]>
+                                <div class="post-meta">
+                                    <span class="date-span">
+	                                    <i class="fa fa-lg fa-clock-o"></i>
+	                                    <span class="date">[cb:post_create_date]</span>
+                                    </span>
+
+                                    <span class="comments-span">
+	                                    <a href="[cb:post_comment_href]"><i class="icon icon-comment-empty"></i>[cb:post_comment_count]</a>
+                                    </span>
+
+                                    <span class="share-post">
+	                                    <span class="js__share-text share-text"><i class="icon icon-share"></i></span>
+              													<ul class="social-icons">
+                                          <li><a target="_blank" class="twitter" href="https://twitter.com/home?status=[cb:post_title]"><i class="icon icon-twitter"></i></a></li>
+                                          <li><a target="_blank" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=[cb:post_title]"><i class="icon icon-facebook"></i></a></li>
+                                          <li><a target="_blank" class="gplus" href="https://plus.google.com/share?url=[cb:post_title]"><i class="icon icon-gplus"></i></a></li>
+          				        							</ul>
+        						                </span>                     
+                                </div>
+										<div class="main-content">[cb:post_body1][cb:post_body2]</div>
+											<div class="readmore clear_fix">
+												<!-- <a href="[cb:post_href]">ادامه مطلب</a> -->
+												<div class="post__like left">[cb:post_like]</div>
+                        <div class="post__more">[cb:post_continue_link]</div>
+                        <!-- <a href="[cb:post_comment_href_onpage]" class="comment_footer">
+                         <span>تعداد نظرات:</span>
+                            [cb:post_comment_count] 
+                        </a> -->
+											</div>
+                        <cb:block_post_tag>
+                          <div class="post-tag-wrapper">
+                              <div class="tag-title">برچسب ها:</div>
+                              <cb:loop_post_tag>
+                                <a href="[cb:post_tag_href]" >
+                                  [cb:post_tag_name]
+                                </a>
+                                <span>/</span>
+                              </cb:loop_post_tag>
+                          </div>
+                        </cb:block_post_tag>
+                          <div class="post-subject-wrapper">
+                            <cb:block_post_category>
+                              <div class="subject-title">طبقه بندی:</div>
+                              <cb:loop_post_category>
+                                <a href="[cb:post_category_href]">
+                                  [cb:post_category_name]
+                                </a>
+                                <span>/</span>
+                               </cb:loop_post_category>
+                            </cb:block_post_category>
+                          </div>
+                        </div>
+                      </div>
+			                	<!-- Comments -->
+                          <cb:block_post_comment>
+                              <div class="comment_list clear_fix">
+                                  <h2 class="comment_title_stable custom_font">ارسال نظر:</h2>
+                                  <cb:loop_post_comment>
+                                      <div class="comment_row">
+                                          <div class="comment_sender">
+                                              <a href="[cb:post_comment_senderweb]" target="_blank">
+                                                  [cb:post_comment_sendername]
+                                              </a> 
+                                              <span class="comment_date">
+                                               [cb:post_comment_date]
+                                              </span>
+                                          </div>
+
+                                          <div class="comment_list_body">
+                                              <div class="comment_body">
+                                                  [cb:post_comment_body]
+                                              </div>
+                                                  [cb:post_comment_replystart]
+                                                  <div class="comment_replay">
+                                                      <div>
+                                                          <i>[cb:post_comment_replyname]</i>: [cb:post_comment_replybody]
+                                                      </div>
+                                                  </div>
+                                                  [cb:post_comment_replyend]
+                                          </div>
+                                      </div>
+                                  </cb:loop_post_comment>
+                                  <div class="comment_form_wrapp">[cb:post_comment_form]</div>
+                              </div>
+                          </cb:block_post_comment>
+                        <!-- Comments  -->
+		                	</div>
+		               	</div>
+                    </cb:loop_post>
+               	</cb:block_post>    
+        <cb:block_pages>
+        <div class="pagination">
+          <ul class="clear_fix">
+            <li class="all-page">تعداد صفحات :[cb:pages_total]</li>
+              <cb:loop_pages>
+                <li><a href="[cb:pages_href]">[cb:pages_no]</a></li>
+              </cb:loop_pages>
+          </ul>
+        </div>
+      </cb:block_pages>
+    </div>
+  			<div class="sidebar-wrapper">
+
+  				<div class="section weblog-name">
+            <div class="logo"><a href="[cb:blog_full_address]">[cb:blog_logo]</a></div>
+  					<h3 class="widget-title">[cb:blog_title]</h3>			
+  					<div class="wifget-content"><p>[cb:blog_slogan]</p></div>
+  				</div>
+
+  				<cb:block_author>
+          <div class="section sidebar">
+            <div class="widget widget-about">
+              <div class="author-info-container">
+  	          					<cb:loop_author>
+  						            <div class="author-image">[cb:author_photo_small]</div>
+  						            <div class="author-name">[cb:author_name]</div>
+  						            <div class="author-about"><p>[cb:author_about_me]</p></div>
+  					            </cb:loop_author>
+                    </div>
+            </div>
+  				</cb:block_author>
+
+  				<cb:block_author>
+            <div class="widget widget-authors">
+              <h3 class="widget-title">نویسندگان</h3>
+              <div class="widget-content">
+  								<ul>
+  									<cb:loop_author>
+  										<li class="cat-item clear_fix">
+  											<a href="[cb:author_href]">[cb:author_name]<span class="number">[cb:author_post_count]</span></a>
+  										</li>
+  									</cb:loop_author>
+  								</ul>
+              </div>
+            </div>
+  				</cb:block_author>
+
+  				<cb:block_stat>
+            <div class="widget widget-stat">
+              <h3 class="widget-title">آمار وبلاگ</h3>
+              <div class="widget-content">
+  								<p>
+  									کل بازدید:[cb:stat_total_view]<br/>
+  									بازدید امروز :[cb:stat_today_view]<br/>
+  									بازدید دیروز : [cb:stat_yesterday_view]<br/>
+  									بازدید این ماه : [cb:stat_this_month_view]<br/>
+  									بازدید ماه قبل : [cb:stat_last_month_view]<br/>
+  									تعداد نویسندگان : [cb:stat_total_author]<br/>
+  									تعداد کل مطالب : [cb:stat_total_post]<br/>
+  									آخرین بازدید : [cb:stat_last_view_date]<br/>
+  									آخرین بروز رسانی : [cb:stat_modify_date]<br/>
+  								</p>
+              </div>
+            </div>
+  				</cb:block_stat>
+
+            <cb:block_blog_category>
+    					<div class="widget widget-archive-cat">
+    						<h3 class="widget-title">آرشیو موضوعی</h3>
+    						<div class="widget-content">
+  								<ul>
+  									<cb:loop_blog_category>
+  										<li class="cat-item clear_fix">
+  											<a href="[cb:blog_category_href]"> [cb:blog_category_name]<span class="number">[cb:blog_category_post_count]</span></a>
+  										</li>
+  									 </cb:loop_blog_category>
+  								</ul>
+    						</div>
+    					</div>
+            </cb:block_blog_category>
+
+  					<cb:block_blog_archive>
+              <div class="widget widget-archive">
+                <h3 class="widget-title">آرشیو</h3>
+                <div class="widget-content">
+    								<ul>
+    									<cb:loop_blog_archive>
+    										<li class="cat-item">
+    											<a href="[cb:blog_archive_href]"> [cb:blog_archive_text]</a>
+    										</li>
+    									 </cb:loop_blog_archive>
+    									 <li class="cat-item last"><a href="[cb:blog_archive_full_list_href]">همه آرشیوها</a></li>
+    								</ul>
+                </div>
+              </div>
+  					</cb:block_blog_archive>
+
+  					<cb:block_link>
+              <div class="widget widget-linkestan">
+                <h3 class="widget-title">لینکستان</h3>
+                <div class="widget-content">
+    								<ul>
+    									<cb:loop_link>
+    										<li class="cat-item">
+    											<a href="[cb:link_href]" title="[cb:link_title]" target="_blank"> [cb:link_text]</a>
+    										</li>
+    									 </cb:loop_link>
+    									 <li class="cat-item last"><a href="[cb:link_full_list_href]">همه لینکها</a></li>
+    								</ul>
+                </div>
+              </div>
+  					</cb:block_link>
+
+  					<cb:block_linkdaily>
+              <div class="widget widget-linkestan">
+                <h3 class="widget-title">لینکدونی</h3>
+                <div class="widget-content">
+    								<ul>
+    									<cb:loop_linkdaily> 
+    										<li class="cat-item">
+    											<a href="[cb:linkdaily_href]" title="[cb:linkdaily_title]" target="_blank">[cb:linkdaily_text]</a>
+    										</li>
+    									 </cb:loop_linkdaily>
+    									 <li class="cat-item"><a href="[cb:linkdaily_full_list_href]">همه لینکها</a></li>
+    									 <li class="cat-item last"><a href="[cb:linkdaily_new_href]">ارسال لینک</a></li>
+    								</ul>
+                </div>
+              </div>
+  					</cb:block_linkdaily>
+
+  					<cb:block_blog_recent_post>
+              <div class="widget widget-recent-post">
+                <h3 class="widget-title">آخرین مطالب</h3>
+                <div class=" widget-content">
+    								<cb:loop_blog_recent_post>
+    									<div class="post cat-item">
+                        		<!-- <div class="post-image">
+                        			<a href="[cb:blog_recent_post_href]">
+                        				<img width="60" height="60" src="img/post-1.jpg" class="post_thumb-img">
+                    				</a>
+                    			   </div> -->
+                            	<div class="post-content">
+                            		<a href="[cb:blog_recent_post_href]">
+  	                          		[cb:blog_recent_post_text]<br>
+                            		<span class="date">[cb:blog_recent_post_date]</span>
+                            		</a>
+    										</div>
+    									</div>
+    								</cb:loop_blog_recent_post>
+                  <div class="all-post"><p><a href="[cb:blog_recent_post_full_list_href]">همه مطالب ارسالی</a></p></div>
+                </div>
+              </div>
+  					</cb:block_blog_recent_post>
+  					
+  					<cb:block_blog_tag_cloud>
+              <div class="widget widget-tags">
+                <div class="widget-title">ابر برچسب</div>
+                <div class="widget-content">
+    								<div class="tag-wrapper">
+    									<cb:loop_blog_tag_cloud>
+    										<a href="[cb:blog_tag_cloud_href]" class="tag-link">[cb:blog_tag_cloud_text]</a>
+    									</cb:loop_blog_tag_cloud>
+    								</div>
+                </div>
+              </div>
+  					</cb:block_blog_tag_cloud>
+
+            <div class="widget widget-survey">
+              <cb:block_poll>
+              <div class="widget-title">نظرسنجی</div>
+               [cb:poll_question]<br>
+               <cb:loop_poll>
+                [cb:poll_answer]<br> 
+               </cb:loop_poll>  
+               <input type="submit" value="[cb:poll_button_text]"/>
+              </cb:block_poll>
+            </div>
+  				</div>
+  			</div>
+		</div>
+
+    <div class="footer">
+      <div class="social-wrapper">
+        <ul>
+          <li class="social-item"><a href="#"><i class="icon icon-facebook"></i></a></li>
+          <li class="social-item"><a href="#"><i class="icon icon-twitter"></i></a></li>
+          <li class="social-item"><a href="#"><i class="icon icon-instagram"></i></a></li>
+          <li class="social-item"><a href="#"><i class="icon icon-gplus"></i></a></li>
+          <li class="social-item"><a href="#"><i class="icon icon-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="copy-right">قدرت گرفته با<svg class="heart" viewBox="0 0 32 29.6">
+          <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+        </svg><a href="http://mihanblog.com/">میهن‎بلاگ</a>
+      </div>
+    </div>
+    <script>
+      $("body").on("click", ".js__share-text", function(e){
+          $(this).parents('.share-post').find(".social-icons").toggleClass("show");
+      });
+    </script>
+	</div>
+</body>
+</html>

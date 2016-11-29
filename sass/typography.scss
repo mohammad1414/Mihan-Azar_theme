@@ -1,0 +1,89 @@
+//Font
+@font-face {
+	font-family: 'Iransans';
+  src: url('font/IRANSans-Medium-web.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+	font-weight: 400;
+}
+
+
+// Font-icon
+@font-face {
+  font-family: 'mihan-theme-icons';
+  // src: url('http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.eot?82035505');
+  // src: url('http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.eot?82035505#iefix') format('embedded-opentype'),
+  //      url('http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.svg?82035505#fontello') format('svg'),
+  //      url('http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.woff?82035505') format('woff');
+
+  // http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.eot
+  // http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.svg
+  // http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.woff
+  src: url('http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.eot');
+  src: url('http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.eot?') format('embedded-opentype'),
+       url('http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.svg?') format('svg'),
+       url('http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.woff?') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'mihan-theme-icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+}
+
+
+// Heading
+
+// h1 {
+// 	font-size: 
+// }
+
+.blog {
+
+	h2 {
+		font-size: 20px;
+	}
+
+  h3 {
+    font-size: 17px;
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+
+  h5 {
+    font-size: 13px;
+  }
+
+  h6 {
+    font-size: 11px;
+  }
+}
+
+// .icon {
+// 	font-family: 'mihan-theme-icons';
+// }
+
+p {
+  font-size: 12px;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.post {
+
+  h1 {
+	 font-size: 12px;
+  }
+}
