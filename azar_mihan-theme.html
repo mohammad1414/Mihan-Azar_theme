@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        <meta charset="utf-8">
+        <title>[cb:blog_page_title]</title>
+        <base href="[cb:blog_address]" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/jquery.min.js"></script>
+        <meta http-equiv="Content-Language" content="fa">
+        <meta name="description" content="[cb:blog_meta_description]" />
+        <meta name="keywords" content="[cb:blog_meta_keywords]" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1.0">
+
+        <link rel="alternate" type="application/rss+xml" title="[cb:blog_title]" 
+        href="[cb:blog_rss_href]" />
+        <link rel="alternate" type="application/atom+xml" title="[cb:blog_title]" 
+        href="[cb:blog_atom_href]" />
+        <link rel="stylesheet" href="css/theme.css">
+    </head>
+    <body class="blog">
+        <div id="page">
+            <header class="header">
+                <div class="wrapper">
+                    <div class="blog-title clear_fix">
+                        <div class="blog-logo"><a href="[cb:blog_full_address]">[cb:blog_logo]</a></div>
+                        <div class="blog-name">
+                            <a href="[cb:blog_full_address]">[cb:blog_title]</a>
+                            <div class="blog-slogan"><p>[cb:blog_slogan]</p></div>
+                        </div>
+                    </div>
+                    <!-- <div class="left-action">
+                        <div class="menu">
+                            <cb:block_extrapage>
+                                <ul class="nav_menu"> 
+                                    <cb:loop_extrapage>       
+                                        <li class="menu-item right">
+                                            <a class="menu-item-link header-link" href="[cb:extrapage_href]">[cb:extrapage_title]</a><br/>
+                                        </li> 
+                                    </cb:loop_extrapage>
+                                </ul>
+                            </cb:block_extrapage>
+                        </div>
+                    <div class="other-links">
+                        <ul class="clear_fix">
+                            <li class="other-item left">
+                                <a class="other-item-link header-link" href="[cb:blog_rss_href]"><i class="icon-rss icon"></i></a>
+                            </li>
+                            <li class="other-item left">
+                                <a class="other-item-link header-link" href="[cb:blog_Atom_href]">Atom</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-wrapper left">
+                        <cb:block_search>
+                            <input type="text" name="search_text" class="keyword" placeholder="جستجو..." />
+                            <div class="search icon-search"><input type="submit" value="" /></div>
+                        </cb:block_search>
+                    </div>
+                    </div> -->
+                </div>
+            </header>
+        </div>
+        <script>
+          $("body").on("click", ".js__share-text", function(e){
+              $(this).parents('.share-post').find(".social-icons").toggleClass("show");
+          });
+        </script>
+    </body>
+</html>
