@@ -16,54 +16,200 @@
         <link rel="alternate" type="application/atom+xml" title="[cb:blog_title]" 
         href="[cb:blog_atom_href]" />
         <link rel="stylesheet" href="css/theme.css">
+
+        <style>
+
+        </style>
     </head>
     <body class="blog">
         <div id="page">
             <header class="header">
-                <div class="wrapper">
-                    <div class="blog-title clear_fix">
-                        <div class="blog-logo"><a href="[cb:blog_full_address]">[cb:blog_logo]</a></div>
-                        <div class="blog-name">
-                            <a href="[cb:blog_full_address]">[cb:blog_title]</a>
-                            <div class="blog-slogan"><p>[cb:blog_slogan]</p></div>
-                        </div>
+                <div class="blog-title clear_fix">
+                    <div class="blog-logo"><a href="[cb:blog_full_address]">[cb:blog_logo]</a></div>
+                    <div class="blog-name">
+                        <a href="[cb:blog_full_address]">[cb:blog_title]</a>
+                        <div class="blog-slogan"><p>[cb:blog_slogan]</p></div>
                     </div>
-                    <!-- <div class="left-action">
-                        <div class="menu">
-                            <cb:block_extrapage>
-                                <ul class="nav_menu"> 
-                                    <cb:loop_extrapage>       
-                                        <li class="menu-item right">
-                                            <a class="menu-item-link header-link" href="[cb:extrapage_href]">[cb:extrapage_title]</a><br/>
-                                        </li> 
-                                    </cb:loop_extrapage>
-                                </ul>
-                            </cb:block_extrapage>
-                        </div>
-                    <div class="other-links">
-                        <ul class="clear_fix">
-                            <li class="other-item left">
-                                <a class="other-item-link header-link" href="[cb:blog_rss_href]"><i class="icon-rss icon"></i></a>
+                </div>
+
+                <cb:block_extrapage>
+                    <div class="menu">
+                        <ul class="nav_menu"> 
+                            <cb:loop_extrapage>       
+                                <li class="menu-item">
+                                    <a class="menu-item-link header-link" href="[cb:extrapage_href]">[cb:extrapage_title]</a>
+                                    <span>/</span>
+                                </li>
+                            </cb:loop_extrapage>
+                            <li class="menu-item" >
+                                <a href="#" id="js__show-search" class="search-icon" onclick="searchToggle(event)"><i class="icon icon-search"></i></a>
                             </li>
-                            <li class="other-item left">
-                                <a class="other-item-link header-link" href="[cb:blog_Atom_href]">Atom</a>
+                            <li class="menu-item" >
+                                <div class="search-wrapper hide">
+                                    <cb:block_search>
+                                        <input type="text" name="search_text" class="search-text" placeholder="جستجو..." />
+                                        <div class="search icon-search"><input type="submit" value="[cb:search_button_text]" /></div>
+                                    </cb:block_search>
+                                </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="search-wrapper left">
-                        <cb:block_search>
-                            <input type="text" name="search_text" class="keyword" placeholder="جستجو..." />
-                            <div class="search icon-search"><input type="submit" value="" /></div>
-                        </cb:block_search>
-                    </div>
-                    </div> -->
-                </div>
+                </cb:block_extrapage>
             </header>
+            
+            <div class="wrapper">
+                <div class="content">
+                    <div class="container clear_fix">
+                        <cb:block_post>
+                            <cb:loop_post>
+                                <div class="post">
+                                    <!-- <div class="post-image">
+                                        <a href="#">
+                                            <img src="img/post-1.jpg">
+                                        </a>
+                                    </div> -->
+                                    <div class="post-content">
+                                        <div class="post-content-inner-wrapper">
+                                            <div class="post-inner-content">
+                                                <[cb:post_title_tag] class="post-header">
+                                                    <a href="[cb:post_href]">[cb:post_title]</a>
+                                                </[cb:post_title_tag]>
+                                                <div class="post-meta">
+                                                    <ul>
+                                                        <li class="date-wrapper">
+                                                            <i class="fa fa-lg fa-clock-o">clock</i>
+                                                            <span class="date">[cb:post_create_date]</span>
+                                                        </li>
+                                                        <li class="comments-span">
+                                                            <a href="[cb:post_comment_href]"><i class="icon icon-comment-empty">comment</i>[cb:post_comment_count]</a>
+                                                        </li>
+                                                        <li class="share-post">
+                                                            <span class="js__share-text share-text"><i class="icon icon-share">share</i></span>
+                                                            <ul class="social-icons">
+                                                                <li><a target="_blank" class="twitter" href="https://twitter.com/home?status=[cb:post_title]"><i class="icon icon-twitter">twitter</i></a></li>
+                                                                <li><a target="_blank" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=[cb:post_title]"><i class="icon icon-facebook">facebook</i></a></li>
+                                                                <li><a target="_blank" class="gplus" href="https://plus.google.com/share?url=[cb:post_title]"><i class="icon icon-gplus">googleplus</i></a></li>
+                                                            </ul>
+                                                        </li>                     
+                                                    </ul>
+                                                </div>
+                                                <div class="main-content">[cb:post_body1][cb:post_body2]</div>
+                                                <div class="readmore clear_fix">
+                                                    <!-- <a href="[cb:post_href]">ادامه مطلب</a> -->
+                                                    <div class="post__like left">[cb:post_like]</div>
+                                                    <div class="post__more right">[cb:post_continue_link]</div>
+                                                    <!-- <a href="[cb:post_comment_href_onpage]" class="comment_footer">
+                                                     <span>تعداد نظرات:</span>
+                                                        [cb:post_comment_count] 
+                                                    </a> -->
+                                                </div>
+                                                <div class="post-bottom-info">
+                                                    <cb:block_post_tag>
+                                                        <div class="post-tag-wrapper">
+                                                            <div class="tag-title">برچسب ها:</div>
+                                                            <cb:loop_post_tag>
+                                                                <a href="[cb:post_tag_href]" >
+                                                                [cb:post_tag_name]
+                                                                </a>
+                                                            <span>/</span>
+                                                            </cb:loop_post_tag>
+                                                        </div>
+                                                    </cb:block_post_tag>
+                                                    <cb:block_post_category>
+                                                        <div class="post-subject-wrapper">
+                                                            <div class="subject-title">طبقه بندی:</div>
+                                                            <cb:loop_post_category>
+                                                                <a href="[cb:post_category_href]">
+                                                                [cb:post_category_name]
+                                                                </a>
+                                                                <span>/</span>
+                                                            </cb:loop_post_category>
+                                                        </div>
+                                                    </cb:block_post_category>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Comments -->
+                                          <cb:block_post_comment>
+                                              <div class="comment_list clear_fix">
+                                                    <h2 class="comment_title_stable custom_font">ارسال نظر:</h2>
+                                                    <cb:loop_post_comment>
+                                                        <div class="comment_row">
+                                                          <div class="comment_sender">
+                                                              <a href="[cb:post_comment_senderweb]" target="_blank">
+                                                                  [cb:post_comment_sendername]
+                                                              </a> 
+                                                              <span class="comment_date">
+                                                               [cb:post_comment_date]
+                                                              </span>
+                                                          </div>
+
+                                                          <div class="comment_list_body">
+                                                                <div class="comment_body">
+                                                                    [cb:post_comment_body]
+                                                                </div>
+                                                                    [cb:post_comment_replystart]
+                                                                <div class="comment_replay">
+                                                                    <div>
+                                                                        <i>[cb:post_comment_replyname]</i>: [cb:post_comment_replybody]
+                                                                    </div>
+                                                                </div>
+                                                                [cb:post_comment_replyend]
+                                                          </div>
+                                                        </div>
+                                                    </cb:loop_post_comment>
+                                                    <div class="comment_form_wrapp">[cb:post_comment_form]</div>
+                                              </div>
+                                          </cb:block_post_comment>
+                                        <!-- Comments  -->
+                                    </div>
+                                </div>
+                            </cb:loop_post>
+                        </cb:block_post>
+                    </div>
+                    <cb:block_pages>
+                        <div class="pagination">
+                            <ul class="clear_fix">
+                                <li class="all-page">تعداد صفحات :[cb:pages_total]</li>
+                                <cb:loop_pages>
+                                    <li><a href="[cb:pages_href]">[cb:pages_no]</a></li>
+                                </cb:loop_pages>
+                            </ul>
+                        </div>
+                    </cb:block_pages>
+                </div>
+            </div>
         </div>
         <script>
-          $("body").on("click", ".js__share-text", function(e){
-              $(this).parents('.share-post').find(".social-icons").toggleClass("show");
-          });
+
+            searchToggle = function(event) {
+                event.preventDefault();
+
+                $(".search-wrapper").toggleClass("hide");
+                $('#js__show-search').toggleClass("active");
+            };
+
+            // searchClose = function() {
+            //     searchToggle();
+            //     $('html').unbind("click", searchClose);
+            // };
+
+            // $("#js__show-search").on("click", function(e){
+            //                 e.preventDefault();
+            //     searchToggle();
+            //     e.stopPropagation();
+            // });
+
+            // $("#js__show-search").on("click", function(e){
+            //     e.preventDefault();
+                
+            //     $(this).parents('.nav_menu').find(".search-wrapper").toggleClass("hide");
+            //     $(this).toggleClass("active");
+            // });
+            $(".js__share-text").on("click", function(e){
+                e.preventDefault();
+                $(this).parents('.share-post').find(".social-icons").toggleClass("show");
+            });
         </script>
     </body>
 </html>

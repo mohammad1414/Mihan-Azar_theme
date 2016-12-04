@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: 'mihan-theme-icons';
-  src: url("http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.eot");
-  src: url("http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.eot?") format("embedded-opentype"), url("http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.svg?") format("svg"), url("http://file.mihanblog.com//public/user_data/user_files/639/1915628/icons/fontello.woff?") format("woff");
+  src: url("../font/fonticon/font/fontello.eot");
+  src: url("../font/fonticon/font/fontello.eot?") format("embedded-opentype"), url("../font/fonticon/font/fontello.svg?") format("svg"), url("../font/fonticon/font/fontello.woff?") format("woff");
   font-weight: normal;
   font-style: normal; }
 
